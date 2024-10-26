@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلة حاسبة لبدائل الأطعمة</title>
+    <link rel="stylesheet" href="cancel.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>آلة حاسبة لبدائل الأطعمة</h1>
+
+        <label for="targetAmount">كمية الطعام المطلوبة (جم):</label>
+        <input type="number" id="targetAmount" placeholder="ادخل الكمية المطلوبة" required>
+
+        <label for="originalFood">الطعام الأصلي:</label>
+        <select id="originalFood">
+            <option value="60">أرز (60 جم)</option>
+            <option value="120">مكرونة (120 جم)</option>
+            <option value="100">بطاطس (100 جم)</option>
+            <!-- أضف المزيد من الخيارات هنا -->
+        </select>
+
+        <label for="replacementFood">البديل المطلوب:</label>
+        <select id="replacementFood">
+            <option value="260">بطاطس (260 جم)</option>
+            <option value="120">شوفان (120 جم)</option>
+            <!-- أضف المزيد من الخيارات هنا -->
+        </select>
+
+        <button onclick="calculate()">احسب الكمية المطلوبة</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
