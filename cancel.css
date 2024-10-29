@@ -1,60 +1,198 @@
+/* الملف: cancel.css */
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
 body {
+    background-color: #f5f5f5;
+    color: #333;
+    direction: rtl;
     display: flex;
-    justify-content: center;
+    /* استخدام flexbox */
     align-items: center;
+    /* محاذاة عمودية في المنتصف */
+    justify-content: center;
+    /* محاذاة أفقية في المنتصف */
     height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
+    /* جعل ارتفاع الجسم ملء الشاشة */
 }
 
-.calculator {
+.container {
+    max-width: 600px;
+    margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 24px;
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-label,
-select,
-input,
-button {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+.somebutton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-input,
-select {
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #007bff;
+.somebutton button {
+    background-color: #3498db;
     color: #fff;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.somebutton button:hover {
+    background-color: #2980b9;
+}
+
+.calculator {
+    display: none;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.calculator h2 {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2ecc71;
 }
 
-#result {
-    margin-top: 20px;
-    font-weight: bold;
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e74c3c;
+}
+
+
+/* تنسيق عنصر select */
+
+#replacementFoodVegetables {
+    background-color: #fff;
+    /* لون الخلفية */
     color: #333;
+    /* لون النص */
+    border: 1px solid #ddd;
+    /* حدود العنصر */
+    border-radius: 5px;
+    /* زوايا مستديرة */
+    padding: 10px;
+    /* حشوة داخلية */
+    font-size: 16px;
+    /* حجم الخط */
+    width: 100%;
+    /* عرض كامل */
+    max-width: 400px;
+    /* أقصى عرض للعنصر */
+    cursor: pointer;
+    /* تغيير شكل المؤشر عند التمرير */
+    appearance: none;
+    /* إخفاء السهم الافتراضي */
+    position: relative;
+    /* لتنسيق السهم المخصص */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* ظل خفيف للعنصر */
+}
+
+
+/* تنسيق السهم المخصص */
+
+#replacementFoodVegetables::after {
+    content: "▼";
+    /* رمز السهم */
+    position: absolute;
+    /* تموضع السهم */
+    right: 10px;
+    /* المسافة من اليمين */
+    top: 50%;
+    /* تموضعه في المنتصف عموديًا */
+    transform: translateY(-50%);
+    /* نقل السهم لأعلى */
+    font-size: 12px;
+    /* حجم الخط للسهم */
+    color: #333;
+    /* لون السهم */
+}
+
+
+/* تنسيق خيارات القائمة */
+
+#replacementFoodVegetables option {
+    background-color: #fff;
+    /* لون الخلفية للخيار */
+    color: #333;
+    /* لون النص للخيار */
+    padding: 10px;
+    /* حشوة داخلية للخيار */
+    font-size: 16px;
+    /* حجم الخط للخيار */
+}
+
+
+/* تغيير لون النص عند تمرير الفأرة فوق الخيار */
+
+#replacementFoodVegetables option:hover {
+    background-color: #e0e0e0;
+    /* لون الخلفية عند التمرير */
+}
+
+
+/* تحسين قابلية الاستخدام على الأجهزة المحمولة */
+
+@media (max-width: 600px) {
+    #replacementFoodVegetables {
+        font-size: 14px;
+        /* تقليل حجم الخط للأجهزة الصغيرة */
+        padding: 8px;
+        /* تقليل الحشوة */
+    }
+    #replacementFoodVegetables::after {
+        font-size: 10px;
+        /* تقليل حجم السهم */
+    }
 }
