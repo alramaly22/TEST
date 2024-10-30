@@ -175,11 +175,12 @@
 
         <!-- جدول الكربوهيدرات -->
         <div class="calculator food-table" id="carbohydrate" style="display: none;">
-            <h2>آلة حاسبة لبدائل الكربوهيدرات</h2>
+            <div class="testo">
+                <h2>آلة حاسبة لبدائل الكربوهيدرات</h2>
 
 
-            <label for="originalFoodCarbohydrate">الطعام الأصلي:</label>
-            <select id="originalFoodCarbohydrate">
+                <label for="originalFoodCarbohydrate">الطعام الأصلي:</label>
+                <select id="originalFoodCarbohydrate">
                 <option value="60">أرز </option>
                 <option value="55">كورن فلكس </option>
                 <option value="65">مكرونة-شعرية </option>
@@ -204,11 +205,11 @@
                 <option value="65">مكرونه قبل الطهي</option>
                 <option value="153">مكرونه بعد الطهي</option>
             </select>
-            <!-- <label for="originalAmountCarbohydrate">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
-            <input class="nun" type="number" id="originalAmountCarbohydrate" placeholder="ادخل الكمية المكتوبة" required>
+                <!-- <label for="originalAmountCarbohydrate">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
+                <input class="nun" type="number" id="originalAmountCarbohydrate" placeholder="ادخل الكمية المكتوبة" required>
 
-            <label for="replacementFoodCarbohydrate">البديل المطلوب:</label>
-            <select id="replacementFoodCarbohydrate">
+                <label for="replacementFoodCarbohydrate">البديل المطلوب:</label>
+                <select id="replacementFoodCarbohydrate">
                 <option value="60">أرز </option>
                 <option value="55">كورن فلكس </option>
                 <option value="65">مكرونة-شعرية </option>
@@ -233,18 +234,20 @@
                 <option value="65">مكرونه قبل الطهي</option>
                 <option value="153">مكرونه بعد الطهي</option>
             </select>
-            <button onclick="calculate('originalAmountCarbohydrate', 'originalFoodCarbohydrate', 'replacementFoodCarbohydrate', 'resultCarbohydrate', 'resultInputCarbohydrate')">احسب كمية البديل</button>
-            <p>دي الكمية اللي هتاكلها بالجرام:</p>
-            <input type="text" id="resultInputCarbohydrate" readonly style="display: none; font-weight: bold;">
-            <p id="resultCarbohydrate"></p>
+                <button onclick="calculate('originalAmountCarbohydrate', 'originalFoodCarbohydrate', 'replacementFoodCarbohydrate', 'resultCarbohydrate', 'resultInputCarbohydrate')">احسب كمية البديل</button>
+                <p>دي الكمية اللي هتاكلها بالجرام:</p>
+                <input type="text" id="resultInputCarbohydrate" readonly style="display: none; font-weight: bold;">
+                <p id="resultCarbohydrate"></p>
+            </div>
         </div>
 
         <!-- جدول الدهون الصحية -->
         <div class="calculator food-table" id="healthyfats" style="display: none;">
-            <h2>آلة حاسبة لبدائل الدهون الصحية</h2>
+            <div class="testo">
+                <h2>آلة حاسبة لبدائل الدهون الصحية</h2>
 
-            <label for="originalFoodHealthyFats">الطعام الأصلي:</label>
-            <select id="originalFoodHealthyFats">
+                <label for="originalFoodHealthyFats">الطعام الأصلي:</label>
+                <select id="originalFoodHealthyFats">
                 <option value="20">لوز </option>
                 <option value="20">كاجو </option>
                 <option value="20">بندق </option>
@@ -268,12 +271,12 @@
                     <!-- أضف المزيد من الأطعمة حسب الجدول المتوفر لديك -->
                     </select>
 
-            <!-- <label for="originalAmountHealthyFats">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
-            <input class="nun" type="number" id="originalAmountHealthyFats" placeholder="ادخل الكمية المكتوبة" required>
+                <!-- <label for="originalAmountHealthyFats">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
+                <input class="nun" type="number" id="originalAmountHealthyFats" placeholder="ادخل الكمية المكتوبة" required>
 
 
-            <label for="replacementFoodHealthyFats">البديل المطلوب:</label>
-            <select id="replacementFoodHealthyFats">
+                <label for="replacementFoodHealthyFats">البديل المطلوب:</label>
+                <select id="replacementFoodHealthyFats">
                 <option value="20">لوز </option>
                 <option value="20">كاجو </option>
                 <option value="20">بندق </option>
@@ -296,11 +299,13 @@
                 <option value="4">زيت جوز هند </option>
                     <!-- أضف المزيد من الأطعمة حسب الجدول المتوفر لديك -->
                     </select>
-            <button onclick="calculate('originalAmountHealthyFats', 'originalFoodHealthyFats', 'replacementFoodHealthyFats', 'resultHealthyFats', 'resultInputHealthyFats')">احسب كمية البديل</button>
+                <button onclick="calculate('originalAmountHealthyFats', 'originalFoodHealthyFats', 'replacementFoodHealthyFats', 'resultHealthyFats', 'resultInputHealthyFats')">احسب كمية البديل</button>
 
-            <p>دي الكمية اللي هتاكلها بالجرام:</p>
-            <input type="text" id="resultInputHealthyFats" readonly style="display: none; font-weight: bold;">
-            <p id="resultHealthyFats"></p>
+                <p>دي الكمية اللي هتاكلها بالجرام:</p>
+                <input type="text" id="resultInputHealthyFats" readonly style="display: none; font-weight: bold;">
+                <p id="resultHealthyFats"></p>
+
+            </div>
         </div>
 
         <!-- جدول الوجبات الخفيفة (snack) -->
@@ -308,11 +313,12 @@
 
         <!-- جدول الفواكه -->
         <div class="calculator food-table" id="fruits" style="display: none;">
-            <h2>آلة حاسبة لبدائل الفواكه</h2>
+            <div class="testo">
+                <h2>آلة حاسبة لبدائل الفواكه</h2>
 
 
-            <label for="originalFoodFruits">الطعام الأصلي:</label>
-            <select id="originalFoodFruits">
+                <label for="originalFoodFruits">الطعام الأصلي:</label>
+                <select id="originalFoodFruits">
                 <option value="100">تفاح </option>
                 <option value="200">بطيخ </option>
                 <option value="100">كمثري </option>
@@ -343,12 +349,12 @@
                 <option value="20">مشمش </option>
             </select>
 
-            <!-- <label for="originalAmountFruits">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
-            <input class="nun" type="number" id="originalAmountFruits" placeholder="ادخل الكمية المكتوبة" required>
+                <!-- <label for="originalAmountFruits">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
+                <input class="nun" type="number" id="originalAmountFruits" placeholder="ادخل الكمية المكتوبة" required>
 
 
-            <label for="replacementFoodFruits">البديل المطلوب:</label>
-            <select id="replacementFoodFruits">
+                <label for="replacementFoodFruits">البديل المطلوب:</label>
+                <select id="replacementFoodFruits">
                 <option value="100">تفاح </option>
                 <option value="200">بطيخ </option>
                 <option value="100">كمثري </option>
@@ -378,11 +384,12 @@
                 <option value="25">تين </option>
                 <option value="20">مشمش </option>
             </select>
-            <button onclick="calculate('originalAmountFruits', 'originalFoodFruits', 'replacementFoodFruits', 'resultFruits', 'resultInputFruits')">احسب كمية البديل</button>
+                <button onclick="calculate('originalAmountFruits', 'originalFoodFruits', 'replacementFoodFruits', 'resultFruits', 'resultInputFruits')">احسب كمية البديل</button>
 
-            <p>دي الكمية اللي هتاكلها بالجرام:</p>
-            <input type="text" id="resultInputFruits" readonly style="display: none; font-weight: bold;">
-            <p id="resultFruits"></p>
+                <p>دي الكمية اللي هتاكلها بالجرام:</p>
+                <input type="text" id="resultInputFruits" readonly style="display: none; font-weight: bold;">
+                <p id="resultFruits"></p>
+            </div>
         </div>
 
         <!-- جدول الخضروات -->
@@ -444,32 +451,34 @@
 
         <!-- جدول منتجات الألبان -->
         <div class="calculator food-table" id="dairyproducts" style="display: none;">
-            <h2>آلة حاسبة لبدائل منتجات الألبان</h2>
+            <div class="testo">
+                <h2>آلة حاسبة لبدائل منتجات الألبان</h2>
 
-            <label for="originalFoodDairy">الطعام الأصلي:</label>
-            <select id="originalFoodDairy">
+                <label for="originalFoodDairy">الطعام الأصلي:</label>
+                <select id="originalFoodDairy">
                 <option value="30">لبن بودرة </option>
                 <option value="240">لبن كامل الدسم </option>
                 <option value="240">زبادي كامل الدسم </option>
                 <option value="240">لبن خالي الدسم </option>
             </select>
 
-            <!-- <label for="originalAmountDairy">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
-            <input class="nun" type="number" id="originalAmountDairy" placeholder="ادخل الكمية المكتوبة" required>
+                <!-- <label for="originalAmountDairy">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
+                <input class="nun" type="number" id="originalAmountDairy" placeholder="ادخل الكمية المكتوبة" required>
 
 
-            <label for="replacementFoodDairy">البديل المطلوب:</label>
-            <select id="replacementFoodDairy">
+                <label for="replacementFoodDairy">البديل المطلوب:</label>
+                <select id="replacementFoodDairy">
                 <option value="30">لبن بودرة </option>
                 <option value="240">لبن كامل الدسم </option>
                 <option value="240">زبادي كامل الدسم </option>
                 <option value="240">لبن خالي الدسم </option>
             </select>
 
-            <button onclick="calculate('originalAmountDairy', 'originalFoodDairy', 'replacementFoodDairy', 'resultDairy', 'resultInputDairy')">احسب كمية البديل</button>
-            <p>دي الكمية اللي هتاكلها بالجرام:</p>
-            <input type="text" id="resultInputDairy" readonly style="display: none; font-weight: bold;">
-            <p id="resultDairy"></p>
+                <button onclick="calculate('originalAmountDairy', 'originalFoodDairy', 'replacementFoodDairy', 'resultDairy', 'resultInputDairy')">احسب كمية البديل</button>
+                <p>دي الكمية اللي هتاكلها بالجرام:</p>
+                <input type="text" id="resultInputDairy" readonly style="display: none; font-weight: bold;">
+                <p id="resultDairy"></p>
+            </div>
         </div>
 
         <!-- جدول البقوليات -->
@@ -512,36 +521,38 @@
         </div>
 
         <div class="calculator food-table" id="snack" style="display: none;">
-            <h2>آلة حاسبة لبدائل الوجبات الخفيفة</h2>
+            <div class="testo">
+                <h2>آلة حاسبة لبدائل الوجبات الخفيفة</h2>
 
-            <label for="originalFoodSnack">الطعام الأصلي:</label>
-            <select id="originalFoodSnack">
-                <option value="50">بروتين بار </option>
-                <option value="100">لوبين بين </option>
-                <option value="100">بلانش </option>
-                <option value="30">بف </option>
-                <option value="30">بسكويت هضمية </option>
-                <option value="70">فشار </option>
-            </select>
+                <label for="originalFoodSnack">الطعام الأصلي:</label>
+                <select id="originalFoodSnack">
+               <option value="50">بروتين بار </option>
+               <option value="100">لوبين بين </option>
+               <option value="100">بلانش </option>
+               <option value="30">بف </option>
+               <option value="30">بسكويت هضمية </option>
+               <option value="70">فشار </option>
+           </select>
 
-            <!-- <label for="originalAmountSnack">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
-            <input class="nun" type="number" id="originalAmountSnack" placeholder="ادخل الكمية المكتوبة" required>
+                <!-- <label for="originalAmountSnack">كمية الطعام المكتوبة في النظام الغذائي (جم):</label> -->
+                <input class="nun" type="number" id="originalAmountSnack" placeholder="ادخل الكمية المكتوبة" required>
 
 
-            <label for="replacementFoodSnack">البديل المطلوب:</label>
-            <select id="replacementFoodSnack">
-                <option value="50">بروتين بار </option>
-                <option value="100">لوبين بين </option>
-                <option value="100">بلانش </option>
-                <option value="30">بف </option>
-                <option value="30">بسكويت هضمية </option>
-                <option value="70">فشار </option>
-            </select>
-            <button onclick="calculate('originalAmountSnack', 'originalFoodSnack', 'replacementFoodSnack', 'resultSnack', 'resultInputSnack')">احسب كمية البديل</button>
+                <label for="replacementFoodSnack">البديل المطلوب:</label>
+                <select id="replacementFoodSnack">
+               <option value="50">بروتين بار </option>
+               <option value="100">لوبين بين </option>
+               <option value="100">بلانش </option>
+               <option value="30">بف </option>
+               <option value="30">بسكويت هضمية </option>
+               <option value="70">فشار </option>
+           </select>
+                <button onclick="calculate('originalAmountSnack', 'originalFoodSnack', 'replacementFoodSnack', 'resultSnack', 'resultInputSnack')">احسب كمية البديل</button>
 
-            <p>دي الكمية اللي هتاكلها بالجرام:</p>
-            <input type="text" id="resultInputSnack" readonly style="display: none; font-weight: bold;">
-            <p id="resultSnack"></p>
+                <p>دي الكمية اللي هتاكلها بالجرام:</p>
+                <input type="text" id="resultInputSnack" readonly style="display: none; font-weight: bold;">
+                <p id="resultSnack"></p>
+            </div>
         </div>
     </div>
 </body>
