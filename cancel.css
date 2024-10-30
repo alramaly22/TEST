@@ -74,7 +74,10 @@ html {
 /* variable dark theme */
 
 body {
-    background-color: #000000;
+    background-image: linear-gradient(rgb(255 255 255 / 80%), rgb(52 152 219 / 74%)), url(./blacklogo.webp);
+    background-size: contain;
+    /* background-attachment: fixed; */
+    background-position: center;
     color: #333;
     direction: rtl;
     display: flex;
